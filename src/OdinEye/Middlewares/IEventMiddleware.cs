@@ -1,5 +1,7 @@
 ﻿namespace OdinEye.Middlewares
 {
+    using Models.Proto;
+
     public interface IEventMiddleware
     {
         IEventMiddleware SetNext(EventMiddleware handler);

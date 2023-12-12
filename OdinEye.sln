@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdinEye", "src\OdinEye\OdinEye.csproj", "{6BC0320E-49F2-4A19-BE85-E909D6852C1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdinEye.Models", "src\OdinEye.Models\OdinEye.Models.csproj", "{EC4571E1-8CB5-4063-A44B-465C1047674E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{6BC0320E-49F2-4A19-BE85-E909D6852C1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BC0320E-49F2-4A19-BE85-E909D6852C1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BC0320E-49F2-4A19-BE85-E909D6852C1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC4571E1-8CB5-4063-A44B-465C1047674E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC4571E1-8CB5-4063-A44B-465C1047674E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC4571E1-8CB5-4063-A44B-465C1047674E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC4571E1-8CB5-4063-A44B-465C1047674E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

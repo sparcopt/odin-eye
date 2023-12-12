@@ -1,6 +1,7 @@
 ﻿namespace OdinEye.Middlewares
 {
     using Logging;
+    using Models.Proto;
     using System;
 
     public class ExceptionHandlerMiddleware : EventMiddleware

@@ -1,6 +1,7 @@
 ﻿namespace OdinEye.Coroutines
 {
     using Http;
+    using Models.Proto;
     using System;
     using System.Collections;
     using System.Linq;

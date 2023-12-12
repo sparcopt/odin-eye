@@ -1,6 +1,7 @@
 ﻿namespace OdinEye.Events
 {
     using Middlewares;
+    using Models.Proto;
     using System;
 
     public class EventHandler

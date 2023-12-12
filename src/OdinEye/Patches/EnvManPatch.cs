@@ -1,6 +1,7 @@
 ﻿namespace OdinEye.Patches
 {
     using HarmonyLib;
+    using Models.Proto;
     using System;
 
     [HarmonyPatch(typeof(EnvMan))]
@@ -11,7 +12,7 @@
         protected static void OnMorning()
         {
             // not working
-            OdinEyePlugin.Instance.EventHandler.Handle(new GameEvent(DateTime.UtcNow, "A new day has started!"));
+            // OdinEyePlugin.Instance.EventHandler.Handle(new GameEvent(DateTime.UtcNow, "A new day has started!"));
         }
         
         [HarmonyPatch(nameof(EnvMan.OnEvening))]
@@ -19,7 +20,7 @@
         protected static void OnEvening()
         {
             // not working
-            OdinEyePlugin.Instance.EventHandler.Handle(new GameEvent(DateTime.UtcNow, "Evening has started!"));
+            // OdinEyePlugin.Instance.EventHandler.Handle(new GameEvent(DateTime.UtcNow, "Evening has started!"));
         }
         
         // [HarmonyPatch(nameof(EnvMan.SkipToMorning))]
