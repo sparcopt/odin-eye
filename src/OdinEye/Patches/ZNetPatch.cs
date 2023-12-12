@@ -1,7 +1,7 @@
 ﻿namespace OdinEye.Patches
 {
     using HarmonyLib;
-    using System;
+    using Models.Proto;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -20,7 +20,7 @@
             if (__instance.m_zdoMan.m_peers.Any(zdoPeer => zdoPeer.m_peer == peer))
             {
                 OdinEyePlugin.Instance.EventHandler.Handle(
-                    new GameEvent(DateTime.UtcNow, $"Player has joined: {peer.m_playerName}"));
+                    GameEvent.New(EventType.PlayerJoin, $"Player has joined: {peer.m_playerName}"));
             }
         }
         
@@ -36,7 +36,7 @@
             if (peer.m_characterID != ZDOID.None)
             {
                 OdinEyePlugin.Instance.EventHandler.Handle(
-                    new GameEvent(DateTime.UtcNow, $"Player has spawned: {peer.m_playerName}"));
+                    GameEvent.New(EventType.PlayerSpawn, $"Player has spawned: {peer.m_playerName}"));
             }
             //EventHandler.Handle($"Player details: ZDOID: {peer.m_characterID} UID: {peer.m_uid} SocketHostName: {peer.m_socket.GetHostName()}");
 
@@ -55,14 +55,14 @@
         {
             var peer = __instance.GetPeer(rpc);
             OdinEyePlugin.Instance.EventHandler.Handle(
-                new GameEvent(DateTime.UtcNow, $"Player disconnected: {peer.m_playerName}"));
+                GameEvent.New(EventType.PlayerDisconnect, $"Player disconnected: {peer.m_playerName}"));
         }
         
         [HarmonyPatch(nameof(ZNet.LoadWorld))]
         [HarmonyPostfix]
         protected static void OnLoadWorld(ZNet __instance)
         {
-            OdinEyePlugin.Instance.EventHandler.Handle(new GameEvent(DateTime.UtcNow, "World loaded!"));
+            OdinEyePlugin.Instance.EventHandler.Handle(GameEvent.New(EventType.WorldLoad, "World loaded!"));
 
             __instance.StartCoroutine(OdinEyePlugin.Instance.StatsSnapshotCoroutine.SendGameStatsSnapshotCoroutine());
             //OdinEyePlugin.Instance.StartSendGameStatsSnapshotCoroutine();
@@ -72,14 +72,14 @@
         [HarmonyPostfix]
         protected static void SaveWorld()
         {
-            OdinEyePlugin.Instance.EventHandler.Handle(new GameEvent(DateTime.UtcNow, "World was saved!"));
+            OdinEyePlugin.Instance.EventHandler.Handle(GameEvent.New(EventType.WorldSave, "World was saved!"));
         }
         
         [HarmonyPatch(nameof(ZNet.Shutdown))]
         [HarmonyPrefix]
         protected static void OnShutdown()
         {
-            OdinEyePlugin.Instance.EventHandler.Handle(new GameEvent(DateTime.UtcNow, "Shutdown triggered!"));
+            OdinEyePlugin.Instance.EventHandler.Handle(GameEvent.New(EventType.ServerShutdown, "Shutdown triggered!"));
         }
         
         [HarmonyPatch(nameof(ZNet.SendPeriodicData))]
@@ -100,7 +100,7 @@
                     {
                         if (deadPlayers.Add(zdo.m_uid))
                         {
-                            OdinEyePlugin.Instance.EventHandler.Handle(new GameEvent(DateTime.UtcNow, $"Player died: {peer.m_playerName}"));
+                            OdinEyePlugin.Instance.EventHandler.Handle(GameEvent.New(EventType.PlayerDeath, $"Player died: {peer.m_playerName}"));
                         }
                     }
                     else

@@ -1,5 +1,7 @@
 ﻿namespace OdinEye.Middlewares
 {
+    using Models.Proto;
+
     public delegate void MiddlewareDelegate(GameEvent gameEvent);
     
     public abstract class EventMiddleware : IEventMiddleware

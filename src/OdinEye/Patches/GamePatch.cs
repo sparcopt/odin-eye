@@ -1,7 +1,7 @@
 ﻿namespace OdinEye.Patches
 {
     using HarmonyLib;
-    using System;
+    using Models.Proto;
 
     [HarmonyPatch(typeof(Game))]
     public class GamePatch
@@ -11,14 +11,14 @@
         protected static void Awake()
         {
             // worked
-            OdinEyePlugin.Instance.EventHandler.Handle(new GameEvent(DateTime.UtcNow, "Game.Awake (server launch?)"));
+            OdinEyePlugin.Instance.EventHandler.Handle(GameEvent.New(EventType.GameAwake, "Game.Awake (server launch?)"));
         }
         
         [HarmonyPatch(nameof(Game.OnApplicationQuit))]
         [HarmonyPrefix]
         protected static void OnApplicationQuit()
         {
-            OdinEyePlugin.Instance.EventHandler.Handle(new GameEvent(DateTime.UtcNow, "Game.OnApplicationQuit (server stop?)"));
+            OdinEyePlugin.Instance.EventHandler.Handle(GameEvent.New(EventType.GameQuit, "Game.OnApplicationQuit (server stop?)"));
         }
         
         [HarmonyPatch(nameof(Game.SleepStop))]
@@ -26,7 +26,7 @@
         protected static void SleepStop(long sender)
         {
             var day = EnvMan.instance.GetCurrentDay();
-            OdinEyePlugin.Instance.EventHandler.Handle(new GameEvent(DateTime.UtcNow, $"A new day has started! Day {day}"));
+            OdinEyePlugin.Instance.EventHandler.Handle(GameEvent.New(EventType.GameSleepStop, $"A new day has started! Day {day}"));
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace OdinEye.Models
+﻿namespace OdinEye.Models.Api
 {
     public class Player
     {

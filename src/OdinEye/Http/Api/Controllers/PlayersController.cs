@@ -3,6 +3,7 @@
     using Extensions;
     using System.Collections.Generic;
     using WebSocketSharp.Server;
+    using Player = OdinEye.Models.Api.Player;
 
     public class PlayersController : IController
     {
@@ -10,7 +11,7 @@
 
         public void OnGet(HttpRequestEventArgs requestArguments)
         {
-            var players = new List<Models.Player>();
+            var players = new List<Player>();
                     
             foreach (var peer in ZNet.instance.m_peers)
             {
@@ -26,7 +27,7 @@
                     zdo.GetFloat(ZDOVars.s_maxHealth, out var maxHealth);
                     zdo.GetFloat(ZDOVars.s_stamina, out var stamina);
                             
-                    players.Add(new Models.Player
+                    players.Add(new Player
                     {
                         Id = peer.m_characterID.ToString(),
                         Name = peer.m_playerName,

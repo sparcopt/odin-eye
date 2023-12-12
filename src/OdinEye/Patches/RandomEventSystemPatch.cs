@@ -1,8 +1,9 @@
 ﻿namespace OdinEye.Patches
 {
     using HarmonyLib;
-    using System;
+    using Models.Proto;
     using UnityEngine;
+    using EventType = Models.Proto.EventType;
 
     [HarmonyPatch(typeof(RandEventSystem))]
     public class RandomEventSystemPatch
@@ -16,7 +17,7 @@
                 return;
             }
 
-            OdinEyePlugin.Instance.EventHandler.Handle(new GameEvent(DateTime.UtcNow, $"SetRandomEvent: {ev.m_name} - {ev.m_startMessage}"));
+            OdinEyePlugin.Instance.EventHandler.Handle(GameEvent.New(EventType.RandomEventSet , $"SetRandomEvent: {ev.m_name} - {ev.m_startMessage}"));
         }
     }
 }

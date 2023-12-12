@@ -1,7 +1,7 @@
 ﻿namespace OdinEye.Patches
 {
     using HarmonyLib;
-    using System;
+    using Models.Proto;
 
     [HarmonyPatch(typeof(Talker))]
     public class TalkerPatch
@@ -11,7 +11,7 @@
         protected static void Say(long sender, int ctype, UserInfo user, string text, string senderNetworkUserId)
         {
             // work the same as ChatOnNewMessage
-            OdinEyePlugin.Instance.EventHandler.Handle(new GameEvent(DateTime.UtcNow, $"Talker.Say: {user.Name} - {text}"));
+            OdinEyePlugin.Instance.EventHandler.Handle(GameEvent.New(EventType.PlayerChat, $"Talker.Say: {user.Name} - {text}"));
         }
     }
 }
