@@ -453,6 +453,7 @@
     <Target Name="PrepPlugin" AfterTargets="Build">
         <ItemGroup>
             <PackageItems Include="$(TargetDir)$(AssemblyName).dll" />
+            <PackageItems Include="$(TargetDir)OdinEye.Models.dll" />
             <PackageItems Include="$(TargetDir)WebsocketSharp.Core.dll" />
         </ItemGroup>
         <Copy SourceFiles="@(PackageItems)" DestinationFolder="$(PluginFolder)" SkipUnchangedFiles="true" />
