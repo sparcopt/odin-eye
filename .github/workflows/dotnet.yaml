@@ -19,3 +19,11 @@ jobs:
         run: nuget restore OdinEye.sln
       - name: Build solution
         run: msbuild OdinEye.sln -t:rebuild -property:Configuration=Release
+        
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '6.0.x'
+      - name: Generate nuget package
+        run: dotnet pack src/OdinEye.Models/OdinEye.Models.csproj --configuration Release -o nupkg
+      - name: Upload nuget package
+        run: dotnet nuget push .\nupkg\*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json

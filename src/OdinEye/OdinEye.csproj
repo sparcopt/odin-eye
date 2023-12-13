@@ -428,7 +428,7 @@
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\OdinEye.Models\OdinEye.Models.csproj">
-        <Project>{ec4571e1-8cb5-4063-a44b-465c1047674e}</Project>
+        <Project>{0c64b257-49e8-4202-bb95-035170eaf5ec}</Project>
         <Name>OdinEye.Models</Name>
       </ProjectReference>
     </ItemGroup>
