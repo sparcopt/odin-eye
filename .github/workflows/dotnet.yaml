@@ -26,4 +26,4 @@ jobs:
       - name: Generate nuget package
         run: dotnet pack src/OdinEye.Models/OdinEye.Models.csproj --configuration Release -o nupkg
       - name: Upload nuget package
-        run: dotnet nuget push nupkg/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+        run: dotnet nuget push .\nupkg\*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
