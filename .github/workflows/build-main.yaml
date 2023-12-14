@@ -1,0 +1,21 @@
+﻿name: .NET Build Main
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1.0.5
+      - name: Restore Packages
+        run: nuget restore OdinEye.sln
+      - name: Build solution
+        run: msbuild OdinEye.sln -t:rebuild -property:Configuration=Release

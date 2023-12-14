@@ -3,7 +3,6 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <RootNamespace>OdinEye.Models</RootNamespace>
-        <PackageVersion>1.0.0</PackageVersion>
         <RepositoryUrl>https://github.com/sparcopt/odin-eye</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <Authors>sparcopt</Authors>

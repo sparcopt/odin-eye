@@ -1,0 +1,27 @@
+﻿name: Release
+
+on:
+  release:
+    types: [ published ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1.0.5
+      - name: Restore Packages
+        run: nuget restore OdinEye.sln
+      - name: Build solution
+        run: msbuild OdinEye.sln -t:rebuild -property:Configuration=Release
+
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '6.0.x'
+      - name: Generate nuget package
+        run: dotnet pack src/OdinEye.Models/OdinEye.Models.csproj -p:Version='${{ github.event.release.tag_name }}' --configuration Release -o nupkg
+      - name: Upload nuget package
+        run: dotnet nuget push .\nupkg\*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
