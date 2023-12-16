@@ -391,6 +391,7 @@
         <Compile Include="Events\EventHandler.cs" />
         <Compile Include="Events\EventHandlerConfigurationOptions.cs" />
         <Compile Include="Extensions\HttpListenerResponseExtensions.cs" />
+        <Compile Include="Extensions\ZNetPeerExtensions.cs" />
         <Compile Include="Http\Api\Controllers\IController.cs" />
         <Compile Include="Http\Api\Controllers\PlayersController.cs" />
         <Compile Include="Http\Api\Controllers\ServerDetailsController.cs" />
