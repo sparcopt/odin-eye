@@ -41,52 +41,52 @@
           <HintPath>..\..\packages\HarmonyX.2.7.0\lib\net45\0Harmony.dll</HintPath>
         </Reference>
         <Reference Include="Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\Accessibility.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\Accessibility.dll</HintPath>
         </Reference>
         <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\Assembly-CSharp.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\Assembly-CSharp.dll</HintPath>
         </Reference>
         <Reference Include="assembly_googleanalytics, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\assembly_googleanalytics.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\assembly_googleanalytics.dll</HintPath>
         </Reference>
         <Reference Include="assembly_guiutils, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\assembly_guiutils.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\assembly_guiutils.dll</HintPath>
         </Reference>
         <Reference Include="assembly_lux, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\assembly_lux.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\assembly_lux.dll</HintPath>
         </Reference>
         <Reference Include="assembly_postprocessing, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\assembly_postprocessing.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\assembly_postprocessing.dll</HintPath>
         </Reference>
         <Reference Include="assembly_simplemeshcombine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\assembly_simplemeshcombine.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\assembly_simplemeshcombine.dll</HintPath>
         </Reference>
         <Reference Include="assembly_steamworks, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\assembly_steamworks.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\assembly_steamworks.dll</HintPath>
         </Reference>
         <Reference Include="assembly_sunshafts, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\assembly_sunshafts.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\assembly_sunshafts.dll</HintPath>
         </Reference>
         <Reference Include="assembly_utils, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\assembly_utils.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\assembly_utils.dll</HintPath>
         </Reference>
         <Reference Include="assembly_valheim, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\assembly_valheim.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\assembly_valheim.dll</HintPath>
         </Reference>
         <Reference Include="BepInEx, Version=5.4.20.0, Culture=neutral, processorArchitecture=MSIL">
           <HintPath>..\..\packages\BepInEx.BaseLib.5.4.20\lib\net35\BepInEx.dll</HintPath>
         </Reference>
         <Reference Include="com.rlabrecque.steamworks.net, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\com.rlabrecque.steamworks.net.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\com.rlabrecque.steamworks.net.dll</HintPath>
         </Reference>
         <Reference Include="ConnectedStorage, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\ConnectedStorage.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\ConnectedStorage.dll</HintPath>
         </Reference>
         <Reference Include="Fishlabs.Common, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\Fishlabs.Common.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\Fishlabs.Common.dll</HintPath>
         </Reference>
         <Reference Include="Fishlabs.Core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\Fishlabs.Core.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\Fishlabs.Core.dll</HintPath>
         </Reference>
         <Reference Include="Mono.Cecil, Version=0.11.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
           <HintPath>..\..\packages\Mono.Cecil.0.11.4\lib\net40\Mono.Cecil.dll</HintPath>
@@ -101,10 +101,10 @@
           <HintPath>..\..\packages\Mono.Cecil.0.11.4\lib\net40\Mono.Cecil.Rocks.dll</HintPath>
         </Reference>
         <Reference Include="Mono.Posix, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\Mono.Posix.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\Mono.Posix.dll</HintPath>
         </Reference>
         <Reference Include="Mono.WebBrowser, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\Mono.WebBrowser.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\Mono.WebBrowser.dll</HintPath>
         </Reference>
         <Reference Include="MonoMod.RuntimeDetour, Version=21.12.13.1, Culture=neutral, processorArchitecture=MSIL">
           <HintPath>..\..\packages\MonoMod.RuntimeDetour.21.12.13.1\lib\net452\MonoMod.RuntimeDetour.dll</HintPath>
@@ -114,13 +114,13 @@
         </Reference>
         <Reference Include="mscorlib" />
         <Reference Include="netstandard, Version=2.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\netstandard.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\netstandard.dll</HintPath>
         </Reference>
         <Reference Include="PlayFab, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\PlayFab.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\PlayFab.dll</HintPath>
         </Reference>
         <Reference Include="PlayFabParty, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\PlayFabParty.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\PlayFabParty.dll</HintPath>
         </Reference>
         <Reference Include="protobuf-net, Version=3.0.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
           <HintPath>..\..\packages\protobuf-net.3.2.30\lib\net462\protobuf-net.dll</HintPath>
@@ -155,7 +155,7 @@
         </Reference>
         <Reference Include="System.Xml" />
         <Reference Include="ui_lib, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\ui_lib.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\ui_lib.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
           <HintPath>..\..\packages\UnityEngine.Modules.2023.2.1\lib\net45\UnityEngine.dll</HintPath>
@@ -380,10 +380,10 @@
           <HintPath>..\..\packages\WebsocketSharp.Standard2.2022.4.16.1520\lib\netstandard2.0\WebsocketSharp.Core.dll</HintPath>
         </Reference>
         <Reference Include="XblPCSandbox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\XblPCSandbox.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\XblPCSandbox.dll</HintPath>
         </Reference>
         <Reference Include="XGamingRuntime, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>..\..\packages\ValheimGameLibs.0.217.28\lib\XGamingRuntime.dll</HintPath>
+          <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\XGamingRuntime.dll</HintPath>
         </Reference>
     </ItemGroup>
     <ItemGroup>
