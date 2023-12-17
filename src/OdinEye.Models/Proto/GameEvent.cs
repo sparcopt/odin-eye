@@ -13,18 +13,19 @@
         [ProtoMember(2)]
         public EventType Type { get; set; }
         
-        // [ProtoMember(3)]
-        // public Models.Player Player { get; set; }
+        [ProtoMember(4)]
+        public Player Player { get; set; }
         
-        [ProtoMember(3)]
+        [ProtoMember(5)]
         public IDictionary<string, object> Data { get; set; }
 
-        public static GameEvent New(EventType type, string message) =>
+        public static GameEvent New(EventType type, string message, Player player = null) =>
             new GameEvent
             {
                 CreatedDate = DateTime.UtcNow,
                 Type = type,
-                Message = message
+                Message = message,
+                Player = player
             };
     }
 }

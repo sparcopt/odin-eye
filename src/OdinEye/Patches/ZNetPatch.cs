@@ -1,5 +1,6 @@
 ﻿namespace OdinEye.Patches
 {
+    using Extensions;
     using HarmonyLib;
     using Models.Proto;
     using System.Collections.Generic;
@@ -20,7 +21,7 @@
             if (__instance.m_zdoMan.m_peers.Any(zdoPeer => zdoPeer.m_peer == peer))
             {
                 OdinEyePlugin.Instance.EventHandler.Handle(
-                    GameEvent.New(EventType.PlayerJoin, $"Player has joined: {peer.m_playerName}"));
+                    GameEvent.New(EventType.PlayerJoin, $"Player has joined: {peer.m_playerName}", peer.ToPlayer()));
             }
         }
         
@@ -36,7 +37,7 @@
             if (peer.m_characterID != ZDOID.None)
             {
                 OdinEyePlugin.Instance.EventHandler.Handle(
-                    GameEvent.New(EventType.PlayerSpawn, $"Player has spawned: {peer.m_playerName}"));
+                    GameEvent.New(EventType.PlayerSpawn, $"Player has spawned: {peer.m_playerName}", peer.ToPlayer()));
             }
             //EventHandler.Handle($"Player details: ZDOID: {peer.m_characterID} UID: {peer.m_uid} SocketHostName: {peer.m_socket.GetHostName()}");
 
@@ -55,7 +56,7 @@
         {
             var peer = __instance.GetPeer(rpc);
             OdinEyePlugin.Instance.EventHandler.Handle(
-                GameEvent.New(EventType.PlayerDisconnect, $"Player disconnected: {peer.m_playerName}"));
+                GameEvent.New(EventType.PlayerDisconnect, $"Player disconnected: {peer.m_playerName}", peer.ToPlayer()));
         }
         
         [HarmonyPatch(nameof(ZNet.LoadWorld))]
