@@ -455,6 +455,14 @@
         <ItemGroup>
             <PackageItems Include="$(TargetDir)$(AssemblyName).dll" />
             <PackageItems Include="$(TargetDir)OdinEye.Models.dll" />
+            <PackageItems Include="$(TargetDir)protobuf-net.Core.dll" />
+            <PackageItems Include="$(TargetDir)protobuf-net.dll" />
+            <PackageItems Include="$(TargetDir)System.Buffers.dll" />
+            <PackageItems Include="$(TargetDir)System.Collections.Immutable.dll" />
+            <PackageItems Include="$(TargetDir)System.Memory.dll" />
+            <PackageItems Include="$(TargetDir)System.Runtime.CompilerServices.Unsafe.dll" />
+            <PackageItems Include="$(TargetDir)System.Threading.Tasks.Extensions.dll" />
+            <PackageItems Include="$(TargetDir)Utf8Json.dll" />
             <PackageItems Include="$(TargetDir)WebsocketSharp.Core.dll" />
         </ItemGroup>
         <Copy SourceFiles="@(PackageItems)" DestinationFolder="$(PluginFolder)" SkipUnchangedFiles="true" />
