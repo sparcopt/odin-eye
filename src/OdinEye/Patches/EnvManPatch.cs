@@ -6,12 +6,17 @@
     [HarmonyPatch(typeof(EnvMan))]
     public class EnvManPatch
     {   
-        // This is executed when the server boots
-        // Might add a redundant message - not a critical issue
         [HarmonyPatch(nameof(EnvMan.UpdateTriggers))]
         [HarmonyPrefix]
         protected static void UpdateTriggers(float oldDayFraction, float newDayFraction, Heightmap.Biome biome, float dt)
         {
+            if (ZNet.instance.m_peers.Count == 0)
+            {
+                // This is executed when the server boots
+                // Skip this event if there are no players
+                return;
+            }
+            
             if (oldDayFraction > 0.20000000298023224 && oldDayFraction < 0.25 && newDayFraction > 0.25 && newDayFraction < 0.30000001192092896)
             {
                 var day = EnvMan.instance.GetCurrentDay();
