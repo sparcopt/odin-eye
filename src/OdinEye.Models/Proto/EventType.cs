@@ -8,10 +8,11 @@
         PlayerDeath = 3,
         PlayerDisconnect = 4,
         PlayerChat = 5,
+        PlayersSleepStart = 6,
+        PlayerSleepStop = 7,
         
         GameAwake = 50,
         GameQuit = 51,
-        GameSleepStop = 52,
         WorldLoad = 53,
         WorldSave = 54,
         ServerShutdown = 55,
@@ -20,6 +21,9 @@
         
         RandomEventActivate = 100,
         RandomEventDeactivate = 101,
-        RandomEventSet = 102
+        RandomEventSet = 102,
+        
+        EnvironmentMorningStart = 200,
+        EnvironmentEveningStart = 201
     }
 }

@@ -2,6 +2,7 @@
 {
     using HarmonyLib;
     using Models.Proto;
+    using System.Linq;
 
     [HarmonyPatch(typeof(Game))]
     public class GamePatch
@@ -21,12 +22,22 @@
             OdinEyePlugin.Instance.EventHandler.Handle(GameEvent.New(EventType.GameQuit, "Game.OnApplicationQuit (server stop?)"));
         }
         
+        [HarmonyPatch(nameof(Game.SleepStart))]
+        [HarmonyPrefix]
+        protected static void SleepStart(long sender)
+        {
+            var playerNames = string.Join(", ", ZNet.instance.m_peers.Select(p => p.m_playerName));
+            var message = $"Players {playerNames} went to sleep";
+            OdinEyePlugin.Instance.EventHandler.Handle(GameEvent.New(EventType.PlayersSleepStart, message));
+        }
+        
         [HarmonyPatch(nameof(Game.SleepStop))]
-        [HarmonyPostfix]
+        [HarmonyPrefix]
         protected static void SleepStop(long sender)
         {
-            var day = EnvMan.instance.GetCurrentDay();
-            OdinEyePlugin.Instance.EventHandler.Handle(GameEvent.New(EventType.GameSleepStop, $"A new day has started! Day {day}"));
+            var playerNames = string.Join(", ", ZNet.instance.m_peers.Select(p => p.m_playerName));
+            var message = $"Players {playerNames} woke up";
+            OdinEyePlugin.Instance.EventHandler.Handle(GameEvent.New(EventType.PlayerSleepStop, message));
         }
     }
 }
