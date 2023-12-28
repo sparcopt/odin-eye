@@ -10,5 +10,6 @@
         public string WorldName { get; set; }
         public string SeedName { get; set; }
         public IEnumerable<string> WorldKeys { get; set; } = Enumerable.Empty<string>();
+        public IDictionary<string, string> GlobalKeys { get; set; } = new Dictionary<string, string>();
     }
 }
