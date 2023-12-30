@@ -2,6 +2,7 @@
 {
     using Extensions;
     using Models.Api;
+    using System.Linq;
     using WebSocketSharp.Server;
 
     public class WorldDetailsController : IController
@@ -19,6 +20,7 @@
                 SeedName = ZNet.m_world.m_seedName,
                 WorldKeys = ZNet.m_world.m_startingGlobalKeys,
                 GlobalKeys = ZoneSystem.instance.m_globalKeysValues
+                    .Select(key => new GlobalKey { Name = key.Key, Value = key.Value})
             };
             
             requestArguments.Response.Ok(worldDetails);
