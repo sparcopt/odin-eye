@@ -29,8 +29,8 @@
                 .Value;
 
             var defeatedKeys = ZoneSystem.instance.m_globalKeysValues
-                .Where(kvp => kvp.Value.StartsWith(DefeatedKey))
-                .Select(kvp => kvp.Value)
+                .Where(kvp => kvp.Key.StartsWith(DefeatedKey))
+                .Select(kvp => kvp.Key)
                 .ToHashSet();
             
             var bossDetails = new BossDetails
