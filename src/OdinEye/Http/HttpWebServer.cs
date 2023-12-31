@@ -18,7 +18,8 @@
         {
             new PlayersController(),
             new ServerDetailsController(),
-            new WorldDetailsController()
+            new WorldDetailsController(),
+            new BossDetailsController()
         };
         
         public HttpWebServer(string address, ILogger logger)
