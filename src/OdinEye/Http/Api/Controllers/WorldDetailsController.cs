@@ -2,6 +2,7 @@
 {
     using Extensions;
     using Models.Api;
+    using System.Collections.Generic;
     using System.Linq;
     using WebSocketSharp.Server;
 
@@ -19,8 +20,7 @@
                 WorldName = ZNet.instance.GetWorldName(),
                 SeedName = ZNet.m_world.m_seedName,
                 WorldKeys = ZNet.m_world.m_startingGlobalKeys,
-                GlobalKeys = ZoneSystem.instance.m_globalKeysValues
-                    .Select(key => new GlobalKey { Name = key.Key, Value = key.Value})
+                GlobalKeys = GetGlobalKeys()
             };
             
             requestArguments.Response.Ok(worldDetails);
@@ -40,5 +40,10 @@
 
             return "unknown";
         }
+
+        private IEnumerable<GlobalKey> GetGlobalKeys() =>
+            ZoneSystem.instance.m_globalKeysValues.Count == 0
+                ? Enumerable.Empty<GlobalKey>()
+                : ZoneSystem.instance.m_globalKeysValues.Select(key => new GlobalKey { Name = key.Key, Value = key.Value });
     }
 }
