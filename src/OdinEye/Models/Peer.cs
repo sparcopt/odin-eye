@@ -1,10 +1,7 @@
-﻿namespace OdinEye.Models.Api
+﻿namespace OdinEye.Models
 {
-    using System;
-
-    public class Player
+    public class Peer
     {
-        public Guid Id { get; set; }
         public string CharacterId { get; set; }
         public string SteamId { get; set; }
         public string Name { get; set; }

@@ -116,6 +116,9 @@
         <Reference Include="netstandard, Version=2.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
           <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\netstandard.dll</HintPath>
         </Reference>
+        <Reference Include="NGuid, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+          <HintPath>..\..\packages\NGuid.0.2.0\lib\netstandard2.0\NGuid.dll</HintPath>
+        </Reference>
         <Reference Include="PlayFab, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
           <HintPath>..\..\packages\ValheimGameLibs.0.217.38\lib\PlayFab.dll</HintPath>
         </Reference>
@@ -390,7 +393,10 @@
         <Compile Include="Coroutines\GameStatsSnapshotCoroutine.cs" />
         <Compile Include="Events\EventHandler.cs" />
         <Compile Include="Events\EventHandlerConfigurationOptions.cs" />
+        <Compile Include="Extensions\GuidExtensions.cs" />
         <Compile Include="Extensions\HttpListenerResponseExtensions.cs" />
+        <Compile Include="Extensions\PeerExtensions.cs" />
+        <Compile Include="Extensions\ZNetExtensions.cs" />
         <Compile Include="Extensions\ZNetPeerExtensions.cs" />
         <Compile Include="Http\Api\Controllers\BossDetailsController.cs" />
         <Compile Include="Http\Api\Controllers\IController.cs" />
@@ -406,6 +412,7 @@
         <Compile Include="Middlewares\IEventMiddleware.cs" />
         <Compile Include="Middlewares\EventMiddleware.cs" />
         <Compile Include="Middlewares\LoggingMiddleware.cs" />
+        <Compile Include="Models\Peer.cs" />
         <Compile Include="OdinEyePlugin.cs" />
         <Compile Include="Patches\ChatPatch.cs" />
         <Compile Include="Patches\EnvManPatch.cs" />

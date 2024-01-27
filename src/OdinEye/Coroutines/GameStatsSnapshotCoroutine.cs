@@ -1,10 +1,10 @@
 ﻿namespace OdinEye.Coroutines
 {
+    using Extensions;
     using Http;
     using Models.Proto;
     using System;
     using System.Collections;
-    using System.Linq;
     using UnityEngine;
 
     public class GameStatsSnapshotCoroutine
@@ -33,20 +33,8 @@
                 DayCycle = EnvMan.instance.IsDay() ? "day" : "night"
             };
 
-            var playerStats = ZNet.instance.GetAllCharacterZDOS().Select(zdo =>
-            {
-                zdo.GetFloat(ZDOVars.s_health, out var health);
-                zdo.GetFloat(ZDOVars.s_maxHealth, out var maxHealth);
-                zdo.GetFloat(ZDOVars.s_stamina, out var stamina);
-
-                return new PlayerStats
-                {
-                    Id = zdo.m_uid.ToString(),
-                    Health = health,
-                    MaxHealth = maxHealth,
-                    Stamina = stamina
-                };
-            });
+            var peers = ZNet.instance.GetAllPeers();
+            var playerStats = peers.ToPlayerStats();
 
             var gameStatsSnapshot = new GameStatsSnapshot
             {
