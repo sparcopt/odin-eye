@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[2938],{3701:e=>{e.exports=JSON.parse('{"label":"docusaurus","permalink":"/odineye/blog/tags/docusaurus","allTagsPath":"/odineye/blog/tags","count":4,"unlisted":false}')}}]);
