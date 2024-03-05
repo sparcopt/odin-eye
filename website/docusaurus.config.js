@@ -1,34 +1,18 @@
-// @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
+const { DOCUSAURUS_VERSION } = require("@docusaurus/utils");
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'OdinEye',
+  tagline: 'OdinEye yea',
   favicon: 'img/favicon.ico',
-
-  // Set the production url of your site here
   url: 'https://sparcopt.github.io/',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/odin-eye/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'sparcopt', // Usually your GitHub org/user name.
-  projectName: 'odin-eye', // Usually your repo name.
-
+  organizationName: 'sparcopt',
+  projectName: 'odin-eye',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -41,17 +25,8 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          docRootComponent: "@theme/DocRoot",
+          docItemComponent: "@theme/ApiItem"
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -63,26 +38,39 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
+      colorMode: {
+        defaultMode: 'dark'
+      },
+      image: 'img/odineye.png',
       navbar: {
-        title: 'My Site',
+        title: 'OdinEye',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/odineye.png',
         },
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'docsSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            type: 'docSidebar',
+            sidebarId: 'apiSidebar',
+            position: 'left',
+            label: 'API',
+          },
+          {
+            href: 'https://github.com/sparcopt/odin-eye',
+            className: "header-github-link",
             position: 'right',
+            "aria-label": "GitHub repository",
           },
         ],
       },
@@ -104,38 +92,49 @@ const config = {
               {
                 label: 'Stack Overflow',
                 href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
+              }
             ],
           },
           {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/sparcopt/odin-eye',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} OdinEye. Built with Docusaurus ${DOCUSAURUS_VERSION}.`,
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
     }),
+
+    plugins: [
+      [
+        "docusaurus-plugin-openapi-docs",
+        {
+          id: "openapi",
+          docsPluginId: "classic",
+          config: {
+            petstore: {
+              specPath: "specs/petstore.yaml",
+              outputDir: "docs/api-reference",
+              sidebarOptions: {
+                groupPathsBy: "tag",
+                categoryLinkSource: "tag",
+              },
+            }
+          }
+        },
+      ]
+    ],
+
+    themes: ["docusaurus-theme-openapi-docs"]
 };
+
 
 export default config;

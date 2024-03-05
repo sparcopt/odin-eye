@@ -1,0 +1,140 @@
+---
+id: returns-a-list-of-users
+title: "Returns a list of users."
+description: "Optional extended description in CommonMark or HTML."
+sidebar_label: "Returns a list of users."
+hide_title: true
+hide_table_of_contents: true
+api: eJydk01v2zAMhv+KwFMLqHa623wrhmHrsKzD2p2CHFibsbXoayIdNDD83wcpaZsF6KW+mKJJvjL5cALBnqFZwciUYK2hI26TiWKChwbuioFW0ZOQ76hTJ9+V8epTcC74JaatCkl9fVh+r0BDIo7BMzE0E3xYLPLr/8I36tv93Q+FKeFehY3K8sqjIwYNbfBCXnIWxmhNizmr/sM5dQJuB3KYLdlHggZKFdBghByf+FmS8T3M5dHgSIbQQQM9CWiIKAM0UGfprMqUdtlqVhOMyUIDg0hs6hqjqegJXbRUtcHVu2t4s0+HIqdd0oqqvlJLNF5dxBS6sc3uy2MozPpMjgV74/urM9l3aN56oVQiDiWfIzchKSGW0py1BuM3obTNiM19uy+i6ubn7duibrRirPGU587G95auyvEMkNUrIeuL4x+2xeUwbauQ+nogG+vLU37yHA56i+q6+gizhhhYHJb5Z0yggV8kY/KsUFnD8gwRV+d3nl55ei/PR56EnqSOFo3PNypDm44YHRaI8wYNgSU7pukRmX4nO8/Z/XektIdmtdaww2TwMbd6tZ41DIQdpcLdlvZ5OdqWYkZ0h3YsgJ9vQZ7aC85fPj/APP8DF8RQdg==
+sidebar_class_name: "get api-method"
+info_path: docs/api-reference/sample-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<h1
+  className={"openapi__heading"}
+>
+  Returns a list of users.
+</h1>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/users"}
+>
+  
+</MethodEndpoint>
+
+
+
+Optional extended description in CommonMark or HTML.
+
+## Request
+
+<div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          A JSON array of user names
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <li>
+                        <div
+                          style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                        >
+                          Array [
+                        </div>
+                      </li><div
+                        style={{"marginTop":".5rem","marginBottom":".5rem","marginLeft":"1rem"}}
+                      >
+                        
+                        
+                        string
+                        
+                        
+                      </div><li>
+                        <div
+                          style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                        >
+                          ]
+                        </div>
+                      </li>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"[\n  \"string\"\n]"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
