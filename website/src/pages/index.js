@@ -7,24 +7,36 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+function HeroBanner() {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+    <div className={styles.hero} data-theme="dark">
+      <div className={styles.heroInner}>
+        <Heading as="h1" className={styles.heroProjectTagline}>
+          <img
+            alt="Docusaurus with Keytar"
+            className={styles.heroLogo}
+            src="./img/odineye.png"
+            width="200"
+            height="200"
+          />
+          <span
+            className={styles.heroTitleTextHtml}
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: '<b>Seamlessly</b> expose your server data through a user-friendly <b>REST API</b> and <b>real time events</b>'
+            }}
+          />
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+        <div className={styles.indexCtas}>
+          <Link className="button button--primary" to="/docs/intro">
+            Get Started
+          </Link>
+          <Link className="button button--info" to="https://docusaurus.new">
+            Mod link
           </Link>
         </div>
       </div>
-    </header>
+    </div>
   );
 }
 
@@ -34,7 +46,8 @@ export default function Home() {
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+      {/* <HomepageHeader /> */}
+      <HeroBanner />
       <main>
         <HomepageFeatures />
       </main>
