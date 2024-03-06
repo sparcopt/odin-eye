@@ -7,8 +7,6 @@ const sidebars = {
       type: "doc",
       id: "intro",
     },
-  ],
-  apiSidebar: [
     {
       type: "category",
       label: "API Reference",
@@ -21,7 +19,7 @@ const sidebars = {
       },
       items: require("./docs/api-reference/sidebar.ts"),
     },
-  ],
+  ]
   
 };
 
