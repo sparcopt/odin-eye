@@ -4,10 +4,8 @@ info:
   description: OdinEye API Specification
   version: v1
 servers:
-  - url: http://api.example.com/v1
+  - url: https://valheimserver.domain.com:21618/v1
     description: Optional server description, e.g. Main (production) server
-  - url: http://staging-api.example.com
-    description: Optional server description, e.g. Internal staging server for testing
 tags:
   - name: boss
     description: Boss related resources

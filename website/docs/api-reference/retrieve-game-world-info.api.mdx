@@ -5,7 +5,7 @@ description: "Returns general game world information."
 sidebar_label: "Retrieve game world info"
 hide_title: true
 hide_table_of_contents: true
-api: eJydVd+P2zYM/lcEPm2AmjTXN78Va1cc2vWKrVsfcsFOsRlbjUSpEp2rEfh/L2j77vJrO2xPcSjq+yjyI7kHNnWGYgn3IbkKVhoqzGWykW0gKOB35DZRVjUSJuNUbTyqwVdZ2oTkjTjOQEPCHANlzFDs4erlS/k5xrp5DxrKQIzEcmpidLYcAOZfs7jsIZcNeiNfMYWIie0IWJnuY+vXmOQPdxGhAEuMNSY4jflzg6psU0JiZenFEHJlOglyjHi8++oKNHhL1rceioUG/G58dAjF4qrXwvhLV8rf03f8A74qxV1YpvgyJ0s1aEAShiX4kGi0mA1johAINJCtGwYNLW0p3BOsej1W46PxF9jFqsJGcYMH1bhE6y19QKq5OX4dvMFK0o4VPDC9xy6fM32wmYVpLPcWu3zAYlIyHWiwjD4fFOUie99rqF1YG/fvTKPPs1SnEo0JMxJnZQ4QBOBYQ/R8Po9uP5PPqaimZLvDdcgifZHiBiW3f6PdctOlQ1NdbUekR8s6EHqTjy5WydSDMJ7uhbWzdHr3W4soblvrHFacgnODdnbGtRfe+ZeYLzxU/RrSYPPma0iWO/GRCujBOqCpe+ucWqMypNBH7tSYlNktXY+AW+yU5Fd5w2WDWd0d5uVuxCpDGqdEZak+R576Wavclo0yWd3dwuIW7tQztRB1seVB2+8eVAb9ofmLSPiaNkHMcuCRm1BBATVK70UjSDC/f/TTkDHtMMlw3EObHBTQMMdiPjfRzqZumpXBz3eLsxF0M3wYp0YQdXCqFc7qmfrNWFI/xRSqthTzz5Mr9PqELrOpLdUvTmj/B+c1ydQRjxHywXMjCsDMktp+pUEm+9DSU/ZuKktvO1SvP12fsz6dqT8ilnYzjXTQIOkbvXYLmTUxZPaGnnpR1kuyuMPTvXJKs3/aG/9hJU2iYfzO8+iMJQliyO1+qvi094aKrzQ0IbMY9/u1yfhncn0v5m8tpg6K5UqaK1mzlqwspdcaNJXspOUetthBAa/LEqMoaurC8yUnCX5U37u3n6HvfwBK6JvW
+api: eJyVVW1v1DAM/iuRP4EU7rghIdRvvDPxMgQDPtxOLNf62uwSJyTpjarqf0duy3ZvMO1TU8f2E9uP7RaSKiNkc7h2wRSwkFBgzIP2STuCDL5gqgNFUSJhUEaUyqLodYWmlQtWseIEJASM3lHECFkLJ48f82fX19l7kJA7SkiJb5X3Rue9g+lVZJUWYl6hVXzywXkMSQ8OC9V8qu0SA/+kxiNkoClhiQH233xeocjrEJCS0PSof3KhGn7k8OLB9skJSLCatK0tZDMJ+FtZbxCy2UknGfFlk/Pvfhz/8C9yVmeU8X0xBU0lSEBihDlYF2iQqFXCQM4RSCBdVgkk1LQmd02w6ORQjU/KHkFnqXArkSrcqsYxWKvpA1KZqt3o4BUWnHYsoJMQEe8FJNjgPmhPXhTr86dX794Q/A3sPTbxEO+DjonxBpg1NnELRoWgGpCgE9q4xYGj8F0noTRuqcz/kQadO6H2O8IHjEgpCrXlgR3sUpbuzuqO9R0JHTmk8qQ3uHSRO42Zv0Iu5U/U61Q1YVtUFuvB041k6QitijuGRVBlz8NbO7c0mvZtf9WIrLbWxmCRgjOmp+pGmfpInN9ZfCRQ8caFXmbVlQs6NazDFZC9tPcmrrUxYolCkUDrUyOGpEwu6HRwuMZGcH6FVSmvMIrL7bxcDr5yF4ahVGgqDz2P40OKWOeVUFFcXsDsAi7FQS2YT0mnns5v//IKum3xDybtKa0ci/nCYqpcARmUyM3tFdcRptc3etx6YYOBp28LdTCQQZWSj9l0ulGmQm0HhUnhrNI0yZ3NTmZPZ8+mm9nBzDvrD8qIwUZs3UqBk3IiPipN4oEPrqhzFj8cVaFbSOBZ3nfVGM5Zoel1g+L559NDqNs78dVjrlfjEAcJHM+gtZlxu3sXk1V02w68UILGDe5vkn2Y9nZT3GMJjXVL+DtNvVG6nzl9btuxBOOm60uwkFC5mFjYtksV8VswXcfiXzWGBrL5gvkdtFpyVuZM9wpVwVto3sIaG8jgeZ6j5xKPjXC41jjBN3R4+/ocuu4PDI6Twg==
 sidebar_class_name: "get api-method"
 info_path: docs/api-reference/odineye-api
 custom_edit_url: null
@@ -124,6 +124,15 @@ Returns general game world information.
                         
                       </SchemaItem><SchemaItem
                         collapsible={false}
+                        name={"seedName"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={"**Possible values:** `non-empty`"}
+                        schema={{"description":"Name of the game world seed.","type":"string","minLength":1,"example":"3BdkT6jHFn"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
                         name={"worldKeys"}
                         required={false}
                         schemaName={"string[]"}
@@ -186,8 +195,8 @@ Returns general game world information.
                               name={"value"}
                               required={false}
                               schemaName={"string"}
-                              qualifierMessage={"**Possible values:** `non-empty`"}
-                              schema={{"description":"Value of the global key. For the majority of keys, the value will be an empty string.\nIf the key name matches `activebosses`, the corresponding value will be an integer, such as `\"1\"` ","type":"string","minLength":1}}
+                              qualifierMessage={undefined}
+                              schema={{"description":"Value of the global key. For the majority of keys, the value will be an empty string.\nIf the key name matches `activebosses`, the corresponding value will be an integer, such as `\"1\"` ","type":"string"}}
                             >
                               
                             </SchemaItem><li>
@@ -207,7 +216,7 @@ Returns general game world information.
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"{\n  \"dayNumber\": 12,\n  \"dayCycle\": \"morning\",\n  \"worldName\": \"Dedicated\",\n  \"worldKeys\": [\n    \"string\"\n  ],\n  \"globalKeys\": [\n    {\n      \"name\": \"activebosses\",\n      \"value\": \"string\"\n    }\n  ]\n}"}
+                    responseExample={"{\n  \"dayNumber\": 12,\n  \"dayCycle\": \"morning\",\n  \"worldName\": \"Dedicated\",\n  \"seedName\": \"3BdkT6jHFn\",\n  \"worldKeys\": [\n    \"string\"\n  ],\n  \"globalKeys\": [\n    {\n      \"name\": \"activebosses\",\n      \"value\": \"string\"\n    }\n  ]\n}"}
                     language={"json"}
                   >
                     

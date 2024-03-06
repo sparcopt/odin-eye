@@ -10,6 +10,7 @@ const sidebars = {
     {
       type: "category",
       label: "API Reference",
+      collapsed: false,
       link: {
         type: "generated-index",
         title: "API Reference",

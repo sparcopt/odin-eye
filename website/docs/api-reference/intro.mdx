@@ -1,0 +1,100 @@
+---
+id: intro
+title: "OdinEye API"
+description: "OdinEye API Specification"
+sidebar_label: Introduction
+sidebar_position: 0
+hide_title: true
+custom_edit_url: null
+---
+
+import ApiLogo from "@theme/ApiLogo";
+import SchemaTabs from "@theme/SchemaTabs";
+import TabItem from "@theme/TabItem";
+import Export from "@theme/ApiExplorer/Export";
+
+<span
+  className={"theme-doc-version-badge badge badge--secondary"}
+>
+  Version: v1
+</span>
+
+# Introduction
+
+The OdinEye API is a set of HTTP endpoints that provide support for integrations with a Valheim game server. For example, the API can be used to query the current online players, track boss progression or understand the current in-game day and day cycles.  
+The API is organized around REST: it accepts and returns JSON-encoded requests/responses, uses standard HTTP response codes, authentication, and verbs.
+Each REST API endpoint is documented individually, and the endpoints are categorized by the resource that they primarily affect.
+
+## Base URL
+
+All URLs referenced in the documentation have the following base:
+
+`https://valheimserver.domain.com:21618`
+
+When making API calls, the base URL (including the port) should be changed accordingly, matching the <b>domain</b> that is being used for the game server and the <b>port</b> where OdinEye is running.
+
+## Authentication
+
+:::note
+Authentication has not been implemented at this time.
+:::
+
+Upon implementation, the API will utilize [API Keys](https://en.wikipedia.org/wiki/API_key) as the default authentication method. Subsequently, this documentation will be revised to include the necessary instructions.
+
+## Requests
+
+Making a API request involves combining the standard HTTP verbs (GET, POST, etc) with the URL to the API, the URI to a resource, along with one or more HTTP request headers.
+
+```curl showLineNumbers
+curl -L -X GET 'https://valheimserver.domain.com:21618/v1/players' \
+-H 'Accept: application/json'
+```
+
+## Responses
+
+API requests return HTTP status codes. These requests may also return JSON response bodies that include information about the resource.
+
+### Successful requests
+
+Commonly used HTTP codes:
+
+| Status code      | Description                                                        |
+|------------------|--------------------------------------------------------------------|
+| `200` Ok         | The request succeeded.                                             |
+| `201` Created    | The request succeeded, and a new resource was created as a result. |
+| `204` No content | There is no content to send for this request.                      |
+
+
+### Failed requests
+
+Commonly used HTTP codes:
+
+| Status code                 | Description                                                                                                |
+|-----------------------------|------------------------------------------------------------------------------------------------------------|
+| `400` Bad request           | The server cannot or will not process the request due to something that is perceived to be a client error. |
+| `401` Unauthorized          | The client is not authenticated.                                                                           |
+| `403` Forbidden             | The client does not have access rights to the content.                                                     |
+| `404` Not found             | The server cannot find the requested resource.                                                             |
+| `500` Internal server error | The server has encountered a situation it does not know how to handle.                                     |
+
+
+:::note
+Error handling has not been implemented at this time.
+:::
+
+Upon implementation, the API will utilize [Problem Details (RFC-9457)](https://datatracker.ietf.org/doc/html/rfc9457) as the default format for error responses.  
+Example:
+
+```json
+{
+  "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
+  "title": "Bad Request",
+  "status": 400
+}
+```
+
+## Versioning
+
+The OdinEye API is versioned. The API version name is based on the date when the API version was released. For example, the API version 2022-11-28 was released on Mon, 28 Nov 2022.
+
+Any breaking changes will be released in a new API version. Breaking changes are changes that can potentially break an integration

@@ -4,10 +4,8 @@ info:
   description: OdinEye API Specification
   version: v1
 servers:
-  - url: http://api.example.com/v1
+  - url: https://valheimserver.domain.com:21618/v1
     description: Optional server description, e.g. Main (production) server
-  - url: http://staging-api.example.com
-    description: Optional server description, e.g. Internal staging server for testing
 tags:
   - name: player
     description: Player related resources
@@ -54,7 +52,12 @@ components:
           description: Name of the player.
           type: string
           minLength: 1
-          example: Ragnar
+          example: Thor
+        steamId:
+          description: Steam identifier (64 bits) of the player.
+          type: string
+          minLength: 1
+          example: 76561197960287930
         health:
           description: Health value of the player.
           type: number

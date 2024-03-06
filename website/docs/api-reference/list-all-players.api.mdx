@@ -5,7 +5,7 @@ description: "Returns a list of in-game players."
 sidebar_label: "List all players"
 hide_title: true
 hide_table_of_contents: true
-api: eJy1VEtP20AQ/iurObXSkge0PeyNAyqoUFAopyiHiT2xl3of7I6jRJb/e7W2gZCASqs2l6zm8X3jbx4NMBYR1Bx8hVsKsJCQU8yC9qydBQUz4jrYKFBUOrJwK6HtUYGGRJ8RRyAhUPTORoqgGjieTNLfS5jrbyAhc5bJcvKi95XOMHnH9zGFNBCzkgwe5s7IB4pkOVUxsIpHykTPW0+gwC3vKWOQ4IPzFFj39ZDlMDyHQAwBtyBBM5n4Lr7RAarODxPvrH6oSeicLOuVppDk4pJ2QIYKIgdtC5CwcsEgg4K61jm0ErISA2ZM4eJPCJ6yXuOgDRpfEaiTT5+nx60Ei4YOwb+npv62YKPtJdmCS1DTHWiYYWExpC8oCavk3sc/7+xijVX9No+tzZLCrjCryiH3xNrUBtRkh/bLpJVgcHP+BucVblKSKP8D93SSyCOj0faVqb3tHf+W82TSthJYc6f5Tb+z7f7OXg6b+rShh0lxNuwPtOknwRCXLgcFBXUrhElOGA8QICFSWKeXmjdQhwoUlMxejcfo9WgocJQ5M15PYb+g6+6BlehBxI5XChoVI3GF2ooPPri8zpL54xAKrdyji4yFtsXRHu1fcF5YptBF9JCPkSsXBFPkNPDtQoK2K9ddj0HB61zbsy2J05uLQ9Znn7j1lOnVcOVAQpKvj1pPU9O8i2ywO339RvaNw6oSz7K/gG+eT+j7DvMwZUwbTq3UNvF2cjZDix8vf0ynv3SRk6lplhjpLlRtm8wPNYUtqPlCwhqDxmWSYb7odz2n0M3ET9qCgtMsI58GqBv7dGv3D31S9GnYvp79gLb9BYTKPmg=
+api: eJy1VUtP20AQ/iurOYG0TewAAfbGARVUKBWPU5TDxJ7ES70PdtdRIsv/vVrbQEhApVXri1fz+ma/8XyuIeDCg5iALXFNDqYccvKZkzZIo0HALYXKac+QldIHZuZM6i8LVMS6DD8ADo68NdqTB1HDKEni622Zm2/AITM6kA7Ri9aWMsPoHT76GFKDzwpSuJt7S9aRJx1iFz0qe4aM8GFtCQSY2SNlAThYZyy5ILt+SAfXH/tAdA7XwEEGUv5TeIOdqjLfTXzQ8qkiJnPSQc4luUhXKGijSN+BD07qBXCYG6cwgICqkjk0HLICHWaB3OWfALxkvYdBK1S2JBAHh0fpqOGgUdFu8e9xqL9tWEl9RXoRChDpRmm4L4yL/ftAqN7r/S46NlvfGx+ymQx+/69Bj8dH4zQ9PT4dJ6OT49PDpOFQEJYxbhv+orWzJZbVx7fUlZqR2xzLvDQYug6kqhSIZAN/HAEVri4+wLzGVUxixX/ATpOkZRuV1O/szF3n+LeYB0nTcAgytBP/0SlGs60YV71OvOjDbpK/7bcXmvhwUBQKk4OABbULjJFOGPYlgIMnt4wnMamhciUIKEKwXgyHSywLkqoLGORGodSDzCgxSsfpyXCZwnaDN+0BS9blsA0vZzRYDNg1Ss32rDN5lUXzfh8KzZSD1HPTikl/pZtc6vM1sbMfl7tQrz52ZymT8170gEO8Txe1TCOL1vigsFXCbkE7JrEs2SsPb8rXr4r6OZ3uxx5oFSK3Ukfcls665/z5R+Djn6AwPkRTXc/Q04MrmyaanypyaxCTKYclOomzSMNk2i1fTq4d0k9ag4CzLCMbJ9p+h1F6t3U/Mvoy/a/n99A0vwDfDz4e
 sidebar_class_name: "get api-method"
 info_path: docs/api-reference/odineye-api
 custom_edit_url: null
@@ -160,7 +160,16 @@ Returns a list of in-game players.
                               required={false}
                               schemaName={"string"}
                               qualifierMessage={"**Possible values:** `non-empty`"}
-                              schema={{"description":"Name of the player.","type":"string","minLength":1,"example":"Ragnar"}}
+                              schema={{"description":"Name of the player.","type":"string","minLength":1,"example":"Thor"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"steamId"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={"**Possible values:** `non-empty`"}
+                              schema={{"description":"Steam identifier (64 bits) of the player.","type":"string","minLength":1,"example":76561197960287940}}
                             >
                               
                             </SchemaItem><SchemaItem
@@ -207,7 +216,7 @@ Returns a list of in-game players.
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"{\n  \"entries\": [\n    {\n      \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n      \"characterId\": 34512,\n      \"name\": \"Ragnar\",\n      \"health\": 60,\n      \"maxHealth\": 100,\n      \"stamina\": 30\n    }\n  ]\n}"}
+                    responseExample={"{\n  \"entries\": [\n    {\n      \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n      \"characterId\": 34512,\n      \"name\": \"Thor\",\n      \"steamId\": 76561197960287940,\n      \"health\": 60,\n      \"maxHealth\": 100,\n      \"stamina\": 30\n    }\n  ]\n}"}
                     language={"json"}
                   >
                     
