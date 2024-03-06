@@ -1,0 +1,85 @@
+openapi: 3.0.0
+info:
+  title: OdinEye API
+  description: OdinEye API Specification
+  version: v1
+servers:
+  - url: http://api.example.com/v1
+    description: Optional server description, e.g. Main (production) server
+  - url: http://staging-api.example.com
+    description: Optional server description, e.g. Internal staging server for testing
+tags:
+  - name: world
+    description: World related resources
+    x-displayName: World
+
+paths:
+  /worldInfo:
+    get:
+      tags:
+        - world
+      summary: Retrieve game world info
+      description: Returns general game world information.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorldInfo'
+
+components:
+  schemas:
+    WorldInfo:
+      properties:
+        dayNumber: 
+          type: integer
+          description: The current in-game day.
+          format: int32
+          minimum: 1
+          example: 12
+        dayCycle:
+          description: The current in-game day cycle.
+          type: string
+          enum:
+            - morning
+            - afternoon
+            - night
+            - unknown
+        worldName:
+          description: Name of the game world.
+          type: string
+          minLength: 1
+          example: Dedicated
+        worldKeys:
+          description: List of world keys.
+          type: array
+          items:
+            type: string
+            minLength: 1
+        globalKeys:
+          description: List of global keys.
+          type: array
+          items:
+            $ref: '#/components/schemas/GlobalKey'
+    GlobalKey:
+      description: Represents a global key.
+      properties:
+        name: 
+          description: Name of the global key.
+          type: string
+          minLength: 1
+          enum:
+            - activebosses
+            - defeated_eikthyr
+            - defeated_gdking
+            - defeated_bonemass
+            - defeated_dragon
+            - defeated_goblinking
+            - defeated_queen
+            - killedtroll
+        value: 
+          description: |-
+            Value of the global key. For the majority of keys, the value will be an empty string.
+            If the key name matches `activebosses`, the corresponding value will be an integer, such as `"1"` 
+          type: string

@@ -1,0 +1,67 @@
+openapi: 3.0.0
+info:
+  title: OdinEye API
+  description: OdinEye API Specification
+  version: v1
+servers:
+  - url: http://api.example.com/v1
+    description: Optional server description, e.g. Main (production) server
+  - url: http://staging-api.example.com
+    description: Optional server description, e.g. Internal staging server for testing
+tags:
+  - name: boss
+    description: Boss related resources
+    x-displayName: Bosses
+
+paths:
+  /bosses:
+    get:
+      tags:
+        - boss
+      summary: List all bosses
+      description: Returns a list of in-game bosses with names, keys and defeated status. The number of active bosses is also provided.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BossesResponse'
+
+components:
+  schemas:
+    BossesResponse:
+      description: Represents a bosses response.
+      type: object
+      properties:
+        numberOfActiveBosses:
+          type: integer
+          description: |-
+            Number of currently active bosses.
+            An active boss represents a boss that has been summoned but has not yet been defeated.
+          format: int32
+          minimum: 0
+          example: 2
+        entries:
+          type: array
+          items:
+            $ref: '#/components/schemas/Boss'
+          description: List of bosses.
+    Boss:
+      description: Represents a boss.
+      type: object
+      properties:
+        key:
+          description: Key of the boss.
+          type: string
+          minLength: 1
+          example: gdking
+        name:
+          description: Name of the boss.
+          type: string
+          minLength: 1
+          example: The Elder
+        isDefeated:
+          description: If true, the boss has been defeated.
+          type: boolean
+      

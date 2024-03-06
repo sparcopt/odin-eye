@@ -115,7 +115,7 @@ const config = {
           docsPluginId: "classic",
           config: {
             petstore: {
-              specPath: "specs/petstore.yaml",
+              specPath: "specs/",
               outputDir: "docs/api-reference",
               sidebarOptions: {
                 groupPathsBy: "tag",

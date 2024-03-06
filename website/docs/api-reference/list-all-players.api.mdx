@@ -1,0 +1,224 @@
+---
+id: list-all-players
+title: "List all players"
+description: "Returns a list of in-game players."
+sidebar_label: "List all players"
+hide_title: true
+hide_table_of_contents: true
+api: eJy1VEtP20AQ/iurObXSkge0PeyNAyqoUFAopyiHiT2xl3of7I6jRJb/e7W2gZCASqs2l6zm8X3jbx4NMBYR1Bx8hVsKsJCQU8yC9qydBQUz4jrYKFBUOrJwK6HtUYGGRJ8RRyAhUPTORoqgGjieTNLfS5jrbyAhc5bJcvKi95XOMHnH9zGFNBCzkgwe5s7IB4pkOVUxsIpHykTPW0+gwC3vKWOQ4IPzFFj39ZDlMDyHQAwBtyBBM5n4Lr7RAarODxPvrH6oSeicLOuVppDk4pJ2QIYKIgdtC5CwcsEgg4K61jm0ErISA2ZM4eJPCJ6yXuOgDRpfEaiTT5+nx60Ei4YOwb+npv62YKPtJdmCS1DTHWiYYWExpC8oCavk3sc/7+xijVX9No+tzZLCrjCryiH3xNrUBtRkh/bLpJVgcHP+BucVblKSKP8D93SSyCOj0faVqb3tHf+W82TSthJYc6f5Tb+z7f7OXg6b+rShh0lxNuwPtOknwRCXLgcFBXUrhElOGA8QICFSWKeXmjdQhwoUlMxejcfo9WgocJQ5M15PYb+g6+6BlehBxI5XChoVI3GF2ooPPri8zpL54xAKrdyji4yFtsXRHu1fcF5YptBF9JCPkSsXBFPkNPDtQoK2K9ddj0HB61zbsy2J05uLQ9Znn7j1lOnVcOVAQpKvj1pPU9O8i2ywO339RvaNw6oSz7K/gG+eT+j7DvMwZUwbTq3UNvF2cjZDix8vf0ynv3SRk6lplhjpLlRtm8wPNYUtqPlCwhqDxmWSYb7odz2n0M3ET9qCgtMsI58GqBv7dGv3D31S9GnYvp79gLb9BYTKPmg=
+sidebar_class_name: "get api-method"
+info_path: docs/api-reference/odineye-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<h1
+  className={"openapi__heading"}
+>
+  List all players
+</h1>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/players"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of in-game players.
+
+## Request
+
+<div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          OK
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                entries
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 Player[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <div
+                              style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                            >
+                              
+                              
+                              List of players.
+                              
+                              
+                            </div><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"id"}
+                              required={false}
+                              schemaName={"uuid"}
+                              qualifierMessage={undefined}
+                              schema={{"description":"Unique identifier of the player.","type":"string","format":"uuid"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"characterId"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"description":"Unique identifier of the character.","type":"string","example":34512}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"name"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={"**Possible values:** `non-empty`"}
+                              schema={{"description":"Name of the player.","type":"string","minLength":1,"example":"Ragnar"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"health"}
+                              required={false}
+                              schemaName={"float"}
+                              qualifierMessage={undefined}
+                              schema={{"description":"Health value of the player.","type":"number","format":"float","minimum":0,"example":60}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"maxHealth"}
+                              required={false}
+                              schemaName={"float"}
+                              qualifierMessage={undefined}
+                              schema={{"description":"Maximum health value of the player.","type":"number","format":"float","minimum":0,"example":100}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"stamina"}
+                              required={false}
+                              schemaName={"float"}
+                              qualifierMessage={undefined}
+                              schema={{"description":"Stamina value of the player.","type":"number","format":"float","minimum":0,"example":30}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"entries\": [\n    {\n      \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n      \"characterId\": 34512,\n      \"name\": \"Ragnar\",\n      \"health\": 60,\n      \"maxHealth\": 100,\n      \"stamina\": 30\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

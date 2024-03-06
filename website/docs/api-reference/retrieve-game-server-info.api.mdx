@@ -1,13 +1,13 @@
 ---
-id: returns-a-list-of-users
-title: "Returns a list of users."
-description: "Optional extended description in CommonMark or HTML."
-sidebar_label: "Returns a list of users."
+id: retrieve-game-server-info
+title: "Retrieve game server info"
+description: "Returns general game server information."
+sidebar_label: "Retrieve game server info"
 hide_title: true
 hide_table_of_contents: true
-api: eJydk01v2zAMhv+KwFMLqHa623wrhmHrsKzD2p2CHFibsbXoayIdNDD83wcpaZsF6KW+mKJJvjL5cALBnqFZwciUYK2hI26TiWKChwbuioFW0ZOQ76hTJ9+V8epTcC74JaatCkl9fVh+r0BDIo7BMzE0E3xYLPLr/8I36tv93Q+FKeFehY3K8sqjIwYNbfBCXnIWxmhNizmr/sM5dQJuB3KYLdlHggZKFdBghByf+FmS8T3M5dHgSIbQQQM9CWiIKAM0UGfprMqUdtlqVhOMyUIDg0hs6hqjqegJXbRUtcHVu2t4s0+HIqdd0oqqvlJLNF5dxBS6sc3uy2MozPpMjgV74/urM9l3aN56oVQiDiWfIzchKSGW0py1BuM3obTNiM19uy+i6ubn7duibrRirPGU587G95auyvEMkNUrIeuL4x+2xeUwbauQ+nogG+vLU37yHA56i+q6+gizhhhYHJb5Z0yggV8kY/KsUFnD8gwRV+d3nl55ei/PR56EnqSOFo3PNypDm44YHRaI8wYNgSU7pukRmX4nO8/Z/XektIdmtdaww2TwMbd6tZ41DIQdpcLdlvZ5OdqWYkZ0h3YsgJ9vQZ7aC85fPj/APP8DF8RQdg==
+api: eJydVEuP0zAQ/ivWnEAySVuQls2thxWqYOmKBS6rHrzJJDHED+xJ1CrKf0eTpGwfJzaXWDPj75vHN+6BVBUhe4KIocMAOwkFxjxoT9pZyOAbUhtsFBVaDKoRlTIopmChbemCURyZgISA0TsbMULWw2qx4N852PYzSMidJbTEXuV9o/MRIP0VOaSHmNdoFJ98cB4D6QnQqP3X1jxj2JYPjTpgGK108AgZaEtYYYDL7O/VXpvWCDveFK4UfrorPAajibAQzgqqjzVxHVNRE+r7FUgw2jIKZEsJuFfGNwjZcjFI4G78xBD1lPs5+exgViY46RyzzJlHCtpWE8kXtBXV5zSwSFbLm2T5AQYJkVCZtfeb4prtkX3ipKNCF2hJl3oq/PUpfLxd3d4shkECaRpzehwhNrZ0MPAnwSDVroAMKiSQ4BWDQBpfAuUsMVZbD21oIIOayGdpqrxOZrYkdybtlleD3I4H1Ryld+KVApMqEfdKW/HGB1e0OZvfzqEwyAu6SKrStnp3QfsKzo0lDGPEBHmMLF0QhJG4rcNOAi/KqNa5f9tC27sDivXD5pr1xScePea6nOcJErqj1KBbsh68i2TUKD2rDE7rGjR2eLWnlzz9yx7+z47PkiHcU+obpS2nMXa3n4d+fErGoe8k1C4SW/v+WUX8EZphYPOfFsMBsqedhE4FrZ65MU+7QUKNqsAwquQ3HiCDdZ6jZ1V1qmmZ/erZ4B7/U+Cnu+8wDH8BRViuBw==
 sidebar_class_name: "get api-method"
-info_path: docs/api-reference/sample-api
+info_path: docs/api-reference/odineye-api
 custom_edit_url: null
 ---
 
@@ -27,19 +27,19 @@ import TabItem from "@theme/TabItem";
 <h1
   className={"openapi__heading"}
 >
-  Returns a list of users.
+  Retrieve game server info
 </h1>
 
 <MethodEndpoint
   method={"get"}
-  path={"/users"}
+  path={"/serverInfo"}
 >
   
 </MethodEndpoint>
 
 
 
-Optional extended description in CommonMark or HTML.
+Returns general game server information.
 
 ## Request
 
@@ -56,7 +56,7 @@ Optional extended description in CommonMark or HTML.
         <div>
           
           
-          A JSON array of user names
+          OK
           
           
         </div><div>
@@ -95,27 +95,34 @@ Optional extended description in CommonMark or HTML.
                     </div><ul
                       style={{"marginLeft":"1rem"}}
                     >
-                      <li>
-                        <div
-                          style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
-                        >
-                          Array [
-                        </div>
-                      </li><div
-                        style={{"marginTop":".5rem","marginBottom":".5rem","marginLeft":"1rem"}}
+                      <SchemaItem
+                        collapsible={false}
+                        name={"maxNumberOfPlayers"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={"**Possible values:** `>= 1`"}
+                        schema={{"type":"integer","description":"Maximum number of players permitted on the server.","format":"int32","minimum":1,"example":10}}
                       >
                         
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"gameVersion"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={"**Possible values:** `non-empty`"}
+                        schema={{"description":"Version of the game server.","type":"string","minLength":1,"example":"0.217.14"}}
+                      >
                         
-                        string
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"steamAppId"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={"**Possible values:** `non-empty`"}
+                        schema={{"description":"Steam application identifier of the game server.","type":"string","minLength":1,"example":892970}}
+                      >
                         
-                        
-                      </div><li>
-                        <div
-                          style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
-                        >
-                          ]
-                        </div>
-                      </li>
+                      </SchemaItem>
                     </ul>
                   </details>
                 </TabItem><TabItem
@@ -123,7 +130,7 @@ Optional extended description in CommonMark or HTML.
                   value={"Example (from schema)"}
                 >
                   <ResponseSamples
-                    responseExample={"[\n  \"string\"\n]"}
+                    responseExample={"{\n  \"maxNumberOfPlayers\": 10,\n  \"gameVersion\": \"0.217.14\",\n  \"steamAppId\": 892970\n}"}
                     language={"json"}
                   >
                     
