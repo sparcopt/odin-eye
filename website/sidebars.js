@@ -9,17 +9,40 @@ const sidebars = {
     },
     {
       type: "category",
+      label: "Getting Started",
+      link: {
+        type: "generated-index",
+      },
+      collapsed: false,
+      items: [
+        "getting-started/installation",
+        // 'configuration',
+        // 'playground',
+        // 'typescript-support',
+      ],
+    },
+    {
+      type: "category",
       label: "API Reference",
       collapsed: false,
       link: {
         type: "generated-index",
         title: "API Reference",
-        description:
-          "This is a sample server Petstore server. You can find out more about Swagger at http://swagger.io or on irc.freenode.net, #swagger. For this sample, you can use the api key special-key to test the authorization filters.",
         slug: "/category/api-reference",
       },
       items: require("./docs/api-reference/sidebar.ts"),
     },
+    {
+      type: "category",
+      label: "Events",
+      link: {
+        type: "generated-index",
+      },
+      collapsed: false,
+      items: [
+        "events/intro"
+      ],
+    }
   ]
   
 };
