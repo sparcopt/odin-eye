@@ -1,64 +1,35 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
-const FeatureList = [
-  {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
-];
-
-function Feature({Svg, title, description}) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-}
+import Api from '@site/static/img/api.svg';
+import Events from '@site/static/img/events.svg';
+import Install from '@site/static/img/install.svg';
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+    <div className="container">
+      <div className={styles.gallery}>
+        <div className={styles.card}>
+          <div className={styles.cardheader}>
+            <Install className={styles.featureSvg}/>
+            <h4>Seamless integration</h4>
+          </div>
+          <p>Install the plugin and enhance your server's capabilities in just a few minutes.</p>
+        </div>
+        <div className={styles.card}>
+          <div className={styles.cardheader}>
+            <Api className={styles.featureSvg}/>
+            <h4>Game server data exposed</h4>
+          </div>
+          <p>Use the provided REST API to query game server data such as player info, boss progression and game world details.</p>
+        </div>
+        <div className={styles.card}>
+          <div className={styles.cardheader}>
+            <Events className={styles.featureSvg}/>
+            <h4>Game events</h4>
+          </div>
+          <p>Listen and be notified for in-game events as they happen.</p>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
