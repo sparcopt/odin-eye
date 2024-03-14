@@ -13,12 +13,12 @@ export default function HomepageFeatures() {
             <Install className={styles.featureSvg}/>
             <h4>Seamless integration</h4>
           </div>
-          <p>Install the plugin and enhance your server's capabilities in just a few minutes.</p>
+          <p>Install the plugin and extend your server's capabilities in just a few minutes. Unlock new integration possibilities.</p>
         </div>
         <div className={styles.card}>
           <div className={styles.cardheader}>
             <Api className={styles.featureSvg}/>
-            <h4>Game server data exposed</h4>
+            <h4>Game server API</h4>
           </div>
           <p>Use the provided REST API to query game server data such as player info, boss progression and game world details.</p>
         </div>
@@ -27,7 +27,7 @@ export default function HomepageFeatures() {
             <Events className={styles.featureSvg}/>
             <h4>Game events</h4>
           </div>
-          <p>Listen and be notified for in-game events as they happen.</p>
+          <p>Stay updated with live, in-game events as they occur. Build interactive client applications that mirror the game actions.</p>
         </div>
       </div>
     </div>

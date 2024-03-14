@@ -40,7 +40,8 @@ const sidebars = {
       },
       collapsed: false,
       items: [
-        "events/intro"
+        "events/intro",
+        "events/event-types"
       ],
     }
   ]
