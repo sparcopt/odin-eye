@@ -3,16 +3,13 @@ info:
   title: OdinEye API
   description: OdinEye API Specification
   version: v1
-servers:
-  - url: https://valheimserver.domain.com:21618/v1
-    description: Optional server description, e.g. Main (production) server
 tags:
   - name: boss
     description: Boss related resources
     x-displayName: Bosses
 
 paths:
-  /bosses:
+  /v1/bosses:
     get:
       tags:
         - boss

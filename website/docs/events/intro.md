@@ -16,7 +16,7 @@ The event stream is provided through a WebSocket connection and event payloads a
 
 
 ```
-ws://valheimserver.domain.com:21618/activity
+ws://localhost:3000/activity
 ```
 
 :::info[Important]

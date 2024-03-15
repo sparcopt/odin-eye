@@ -30,7 +30,7 @@ Each REST API endpoint is documented individually, and the endpoints are categor
 All URLs referenced in the documentation have the following base:
 
 ```
-https://valheimserver.domain.com:21618
+http://localhost:3000
 ```
 
 When making API calls, the base URL (including the port) should be changed accordingly, matching the <b>domain</b> that is being used for the game server and the <b>port</b> where OdinEye is running.
@@ -48,7 +48,7 @@ Upon implementation, the API will utilize [API Keys](https://en.wikipedia.org/wi
 Making a API request involves combining the standard HTTP verbs (GET, POST, etc) with the URL to the API, the URI to a resource, along with one or more HTTP request headers.
 
 ```curl showLineNumbers
-curl -L -X GET 'https://valheimserver.domain.com:21618/v1/players' \
+curl -L -X GET 'http://localhost:3000/v1/players' \
 -H 'Accept: application/json'
 ```
 
