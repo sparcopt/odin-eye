@@ -23,7 +23,7 @@ function HeroBanner() {
             className={styles.heroTitleTextHtml}
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
-              __html: '<b>Seamlessly</b> expose your server data through a user-friendly <b>REST API</b> and <b>real time events</b>'
+              __html: '<b>Seamlessly</b> expose your Valheim server data through a user-friendly <b>REST API</b> and <b>real time events</b>'
             }}
           />
         </Heading>
@@ -44,7 +44,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`Seamlessly expose your Valheim server data`}
       description="Description will go into a meta tag in <head />">
       {/* <HomepageHeader /> */}
       <HeroBanner />
