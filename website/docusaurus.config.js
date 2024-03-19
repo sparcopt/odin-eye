@@ -75,17 +75,25 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Installation',
+                to: '/docs/getting-started/installation',
+              },
+              {
+                label: 'API Reference',
+                to: '/docs/api-reference/intro',
+              },
+              {
+                label: 'Events',
+                to: '/docs/events/intro',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Game',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Valheim',
+                href: 'https://www.valheimgame.com/',
               }
             ],
           },

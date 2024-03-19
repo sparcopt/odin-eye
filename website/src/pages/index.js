@@ -31,7 +31,8 @@ function HeroBanner() {
           <Link className="button button--primary" to="/docs/intro">
             Get Started
           </Link>
-          <Link className="button button--info" to="https://docusaurus.new">
+          {/* Add button to mod website in the future! */}
+          <Link className="button button--info" to="https://docusaurus.new" style={{visibility: "hidden"}}>
             Mod link
           </Link>
         </div>
