@@ -13,8 +13,8 @@ OdinEye is a free, open-source Valheim server plugin that exposes server and gam
 ## Features
 
 - <b>Seamless integration</b>
-  - Install the plugin and enhance your server's capabilities in just a few minutes
-- <b>Game server data exposed</b>
+  - Install the plugin and extend your server's capabilities in just a few minutes. Unlock new integration possibilities
+- <b>Game server API</b>
   - Use the provided REST API to query game server data such as player info, boss progression and game world details
 - <b>Game events</b>
-  - Listen and be notified for in-game events as they happen
+  - Stay updated with live, in-game events as they occur. Build interactive client applications that mirror the game actions

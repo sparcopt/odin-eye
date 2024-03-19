@@ -27,7 +27,7 @@ OdinEye will generate a configuration file at `Valheim/BepInEx/config` named `or
 Open the configuration file: 
 
 ```cfg title="/Valheim/BepInEx/config/org.bepinex.plugins.odineye.cfg"
-## Settings file was created by plugin odineye v0.0.0.1
+## Settings file was created by plugin odineye v0.0.1.0
 ## Plugin GUID: org.bepinex.plugins.odineye
 
 [Hosting]
@@ -38,7 +38,7 @@ Open the configuration file:
 HttpServerAddress =
 ```
 
-Provide a value for the `HttpServerAddress` field. Example: `https://yourserver.com:21618`
+Provide a value for the `HttpServerAddress` field. Example: `http://yourserver.com:21618`
 
 
 :::info[Remarks]
@@ -61,5 +61,24 @@ Save the changes made to the configuration file and restart the dedicated server
 
 ## Validation
 
-Upon restarting, check the BepInEx logs for the presence of the line: OdinEye is running.  
+Upon restarting, check the BepInEx logs for the presence of the following lines:  
+
+```shell
+[Message:   BepInEx] Preloader started
+[Info   :   BepInEx] Loaded 1 patcher method from [BepInEx.Preloader 5.4.22.0]
+[Info   :   BepInEx] 1 patcher plugin loaded
+[Info   :   BepInEx] Patching [UnityEngine.CoreModule] with [BepInEx.Chainloader]
+[Message:   BepInEx] Preloader finished
+[Message:   BepInEx] Chainloader ready
+[Message:   BepInEx] Chainloader started
+[Info   :   BepInEx] 1 plugin to load
+// highlight-start
+[Info   :   BepInEx] Loading [odineye 0.0.1.0]
+[Info   :   odineye] OdinEye starting!
+[Info   :   odineye] Starting Http Server at ...
+[Info   :   odineye] OdinEye running!
+// highlight-end
+[Message:   BepInEx] Chainloader startup complete
+```
+
 Locating these lines confirms successful installation of the plugin.

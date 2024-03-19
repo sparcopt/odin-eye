@@ -32,9 +32,3 @@ Authentication has not been implemented at this time.
 :::
 
 Upon implementation, the event stream will utilize [API Keys](https://en.wikipedia.org/wiki/API_key) as the default authentication method. Subsequently, this documentation will be revised to include the necessary instructions.
-
-## Versioning
-
-The OdinEye API is versioned. The API version name is based on the date when the API version was released. For example, the API version 2022-11-28 was released on Mon, 28 Nov 2022.
-
-Any breaking changes will be released in a new API version. Breaking changes are changes that can potentially break an integration
