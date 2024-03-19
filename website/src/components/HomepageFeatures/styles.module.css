@@ -22,11 +22,11 @@
   border-radius: var(--ifm-card-border-radius);
   box-shadow: var(--ifm-global-shadow-lw);
   overflow: hidden;
+}
 
-  h4 {
-    text-transform: uppercase;
-    margin: 0;
-  }
+.card h4 {
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .cardheader {
