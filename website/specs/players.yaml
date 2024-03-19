@@ -1,0 +1,76 @@
+openapi: 3.0.0
+info:
+  title: OdinEye API
+  description: OdinEye API Specification
+  version: v1
+tags:
+  - name: player
+    description: Player related resources
+    x-displayName: Players
+
+paths:
+  /v1/players:
+    get:
+      tags:
+        - player
+      summary: List all players
+      description: Returns a list of in-game players.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlayersResponse'
+
+components:
+  schemas:
+    PlayersResponse:
+      description: Represents a players response.
+      type: object
+      properties:
+        entries:
+          type: array
+          items:
+            $ref: '#/components/schemas/Player'
+          description: List of players.
+    Player:
+      description: Represents a player.
+      properties:
+        id: 
+          description: Unique identifier of the player.
+          type: string
+          format: uuid
+        characterId:
+          description: Unique identifier of the character.
+          type: string
+          example: 34512
+        name:
+          description: Name of the player.
+          type: string
+          minLength: 1
+          example: Thor
+        steamId:
+          description: Steam identifier (64 bits) of the player.
+          type: string
+          minLength: 1
+          example: 76561197960287930
+        health:
+          description: Health value of the player.
+          type: number
+          format: float
+          minimum: 0.00
+          example: 60.00
+        maxHealth:
+          description: Maximum health value of the player.
+          type: number
+          format: float
+          minimum: 0.00
+          example: 100.00
+        stamina:
+          description: Stamina value of the player.
+          type: number
+          format: float
+          minimum: 0.00
+          example: 30.00
+      

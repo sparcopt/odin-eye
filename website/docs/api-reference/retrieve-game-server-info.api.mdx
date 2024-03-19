@@ -1,0 +1,147 @@
+---
+id: retrieve-game-server-info
+title: "Retrieve game server info"
+description: "Returns general game server information."
+sidebar_label: "Retrieve game server info"
+hide_title: true
+hide_table_of_contents: true
+api: eJydU0uPmzAQ/ivWd7aSkFbaLrccVlXUR1ZN20uUgwMDuMXGtQeUCPHfKwOrTTanlgvIM/5eM/RgVQakBwTyHXkcJXIKmdeOdWOR4htx620QJVnyqhalMiSmZqFt0XijYucCEp6Ca2yggLTHerWKr1uw3SdIZI1lshyryrlaZyPA8leILT1CVpFR8cv5xpFnPQEadf7amhP5XfFcqwv58ZQvjpBCW6aSPN6q/6LO2rRG2PGmaArhprvCkTeamXLRWMHVi6foYzI1ob5bQ8JoG1GQJhJ0VsbVhDRZDRIxjZ/kg56035LPhcgaCa6Siyyz8sBe23Ii+Uy25OqWBqvFOnlYJO8xSAQmZTbObfN7tn2siatEhc7Jsi70ZPz/JXx4XD8+rIZBgjWPmvYjxNYWDYb4SBjiqsmRoiSGhFMRBMsuWYbXXom4MePYZqBdru3ThcTmeXs3u6ua2DvKdDEbg0T3kjm6JAbjmsBGjTOwytC0t15TR3cL+5anf13If1n2OTumMy9drbSNMlpfj4s7uj9EbRJX/o8SVRM4lvr+pAL98PUwxOM/LfkL0sNRolNeq1NM53AcJCpSOXmkhx6/6YIUmywjFzPuVN1GCXc/0XC8msfHp+8Yhr9D2FbY
+sidebar_class_name: "get api-method"
+info_path: docs/api-reference/odineye-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<h1
+  className={"openapi__heading"}
+>
+  Retrieve game server info
+</h1>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/serverInfo"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns general game server information.
+
+## Request
+
+<div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          OK
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"maxNumberOfPlayers"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={"**Possible values:** `>= 1`"}
+                        schema={{"type":"integer","description":"Maximum number of players permitted on the server.","format":"int32","minimum":1,"example":10}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"gameVersion"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={"**Possible values:** `non-empty`"}
+                        schema={{"description":"Version of the game server.","type":"string","minLength":1,"example":"0.217.14"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"steamAppId"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={"**Possible values:** `non-empty`"}
+                        schema={{"description":"Steam application identifier of the game server.","type":"string","minLength":1,"example":892970}}
+                      >
+                        
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"maxNumberOfPlayers\": 10,\n  \"gameVersion\": \"0.217.14\",\n  \"steamAppId\": 892970\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

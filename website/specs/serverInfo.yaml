@@ -1,0 +1,45 @@
+openapi: 3.0.0
+info:
+  title: OdinEye API
+  description: OdinEye API Specification
+  version: v1
+tags:
+  - name: server
+    description: Server related resources
+    x-displayName: Server
+
+paths:
+  /v1/serverInfo:
+    get:
+      tags:
+        - server
+      summary: Retrieve game server info
+      description: Returns general game server information.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServerInfo'
+
+components:
+  schemas:
+    ServerInfo:
+      properties:
+        maxNumberOfPlayers: 
+          type: integer
+          description: Maximum number of players permitted on the server.
+          format: int32
+          minimum: 1
+          example: 10
+        gameVersion:
+          description: Version of the game server.
+          type: string
+          minLength: 1
+          example: 0.217.14
+        steamAppId:
+          description: Steam application identifier of the game server.
+          type: string
+          minLength: 1
+          example: 892970

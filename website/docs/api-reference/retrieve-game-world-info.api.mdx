@@ -1,0 +1,233 @@
+---
+id: retrieve-game-world-info
+title: "Retrieve game world info"
+description: "Returns general game world information."
+sidebar_label: "Retrieve game world info"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVU1P3DAQ/SvWnF2WBamH3GgLFIGgaml7WFZdbzKbmLXHwXYWolX+ezVJgOxHizglGY/fm483kzVElQdIJvDovMlgKiHDkHpdRu0IEviOsfIURI6EXhmRK4ui9RWaFs5bxY4HIMFjKB0FDJCs4ejwkB+bWDeXICF1FJEin6qyNDptAUb3gV3WENICreK30rsSfdQdYKbq68rO0fNHrEuEBDRFzNHDdsy3BYq08h4pCk0f2pAzVXOQXcTd3eMjkGA1aVtZSMYS8EnZ0iAk46NGMuPnOuXP7Tz+gS9SdmeWPr4QvaYcJCAxwwSs89RZ1CKiJ+cIJJDOiwgSKlqSeySYNrLrxrWye9jZKtxCxAIH3dhHazVdIeWx2MwOvmDGZccMGgkB8V1Egi+8h+34U7a8/Xj/9YzgObFLrMMu35UOkfk6miXWYUCjvFc1SNARbRhoYC9900jIjZsr83+mzudNqu2JKD0GpBiEGiAwwKZk6e2qbtx+o6C9hlQa9QrnLvCksfIXyK38g3oZi9oPTXm27JBeLHNHaFXYuJh5lbc6fL3n5kbT9t2HCpHdltoYzKJ3xrRSXSlT7cnzF5v3JCrOnG9tVt07r2PNPtwB2VpbNPGojRFzFIoE2jLWoivKwR1ddIBLrAXXV1gV0wKDmA3rMuuwUue7pZRpyneR+/UhRajSQqggZncwvoOZ2OkF6ynq2Mr5/FlX0AzNv1m0F7RwbOYDi7FwGSSQIw93qbiPMFqNR48vrhJ4h7Zq7mFuMk2nNYqTbxc7a21wJn6UmOpFvzxBwgp96LxWYx6z0oVoFb3KkBe517jC7Q2+TbN+3dDvWP59vSI+xVFplG5nvfKmXeRt6hOOrJ//NvmphMKFyCfr9VwF/OlN07D5oUJfQzKZsri8VnMuzYS1VqDK+BcwWcMSa0jgJE2x5Pr2Ktz9pzTTQS/OT2+haf4CyJhk7g==
+sidebar_class_name: "get api-method"
+info_path: docs/api-reference/odineye-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<h1
+  className={"openapi__heading"}
+>
+  Retrieve game world info
+</h1>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/worldInfo"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns general game world information.
+
+## Request
+
+<div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          OK
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"dayNumber"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={"**Possible values:** `>= 1`"}
+                        schema={{"type":"integer","description":"The current in-game day.","format":"int32","minimum":1,"example":12}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"dayCycle"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={"**Possible values:** [`morning`, `afternoon`, `night`, `unknown`]"}
+                        schema={{"description":"The current in-game day cycle.","type":"string","enum":["morning","afternoon","night","unknown"]}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"worldName"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={"**Possible values:** `non-empty`"}
+                        schema={{"description":"Name of the game world.","type":"string","minLength":1,"example":"Dedicated"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"seedName"}
+                        required={false}
+                        schemaName={"string"}
+                        qualifierMessage={"**Possible values:** `non-empty`"}
+                        schema={{"description":"Name of the game world seed.","type":"string","minLength":1,"example":"3BdkT6jHFn"}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={false}
+                        name={"worldKeys"}
+                        required={false}
+                        schemaName={"string[]"}
+                        qualifierMessage={"**Possible values:** `non-empty`"}
+                        schema={{"description":"List of world keys.","type":"array","items":{"type":"string","minLength":1}}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                globalKeys
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 GlobalKey[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <div
+                              style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                            >
+                              
+                              
+                              List of global keys.
+                              
+                              
+                            </div><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"name"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={"**Possible values:** `non-empty`, [`activebosses`, `defeated_eikthyr`, `defeated_gdking`, `defeated_bonemass`, `defeated_dragon`, `defeated_goblinking`, `defeated_queen`, `killedtroll`]"}
+                              schema={{"description":"Name of the global key.","type":"string","minLength":1,"enum":["activebosses","defeated_eikthyr","defeated_gdking","defeated_bonemass","defeated_dragon","defeated_goblinking","defeated_queen","killedtroll"]}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"value"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={undefined}
+                              schema={{"description":"Value of the global key. For the majority of keys, the value will be an empty string.\nIf the key name matches `activebosses`, the corresponding value will be an integer, such as `\"1\"` ","type":"string"}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"dayNumber\": 12,\n  \"dayCycle\": \"morning\",\n  \"worldName\": \"Dedicated\",\n  \"seedName\": \"3BdkT6jHFn\",\n  \"worldKeys\": [\n    \"string\"\n  ],\n  \"globalKeys\": [\n    {\n      \"name\": \"activebosses\",\n      \"value\": \"string\"\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      

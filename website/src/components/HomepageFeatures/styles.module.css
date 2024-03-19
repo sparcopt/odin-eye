@@ -1,0 +1,45 @@
+.featureSvg {
+  height: 32px;
+  width: 32px;
+  fill: var(--ifm-color-primary);
+}
+
+/* Card gallery */
+.gallery {
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+/* Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: var(--ifm-card-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+  overflow: hidden;
+
+  h4 {
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+
+.cardheader {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Dark Mode Styles */
+
+html[data-theme='dark'] {
+  .card:hover {
+    --ifm-card-background-color: var(--ifm-color-gray-800) !important;
+  }
+}

@@ -1,0 +1,206 @@
+---
+id: list-all-bosses
+title: "List all bosses"
+description: "Returns a list of in-game bosses with names, keys and defeated status. The number of active bosses is also provided."
+sidebar_label: "List all bosses"
+hide_title: true
+hide_table_of_contents: true
+api: eJzFVMtu2zAQ/BViz2ycuDfdXDQoggRJkaYn1wdKWllMxEe5KzWCoX8vVlIcPw4teqkvBpbk7MzsrHbAZkuQrSEPRLDRUCIVyUa2wUMGj8ht8qSMaiyxCpWy/sPWOFRyH0n9slwrbxySVi/YkzK+VCVWaBhLRWy4pQv1VKPyrcsxCYQp2HZ7BEvKNBRUTKGzJZYXoCEhxeAJCbIdLC8v5e+Y2MMtaCiCZ/QspybGxhZGThfPJFd2QEWNzpy/fcSYkNCz6JpZvHWU7txHhAxC/owFg4aYQsTEdqIz6XioVqOKT+Nzqc+vrGfcYoJTJ+/38os2JfTc9MdGXPzwK39YUumUp+LasKoNqRzRK2qdCx5LlbdT1QdWPfJ0+jYEUVSF5AxP7D4uQYOz3rrWQXapAV+Niw1Cthw0oOdkjwSZlEwPGiyjo78w888OvmB/jnOLvZjDNZ6iECfrtxPpO/RbriG7OqAN2/JFLgwaJIjn0PeS13/EluReNyUmgbf0eTb1vMlNpTi1qPdd3ud0OIm5bx5Cg8bDMGhgy2MriZJ0Oca9m/duDsnZC6THObowyE+DQ65DKb7g6L0RUbDorhYThszSV2Ec8Qz0UFp/3aNafb05C+7BmfoWsbDVvGegocNE063uSqjHQOzMuHzTKCb6pmnUvvcR+u59h//Xt2aeCOMrL2JjrBchbWqE3OTdWtRpmBVsNNSBWMq7XW4Iv6dmGKT8s8XUQ7beaOhMsiYXb9ebQUONRiKUrefww6ooMMp0OtO045adfr+GzcEkv1w/wTD8Brp09G4=
+sidebar_class_name: "get api-method"
+info_path: docs/api-reference/odineye-api
+custom_edit_url: null
+---
+
+import ApiTabs from "@theme/ApiTabs";
+import DiscriminatorTabs from "@theme/DiscriminatorTabs";
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import SecuritySchemes from "@theme/ApiExplorer/SecuritySchemes";
+import MimeTabs from "@theme/MimeTabs";
+import ParamsItem from "@theme/ParamsItem";
+import ResponseSamples from "@theme/ResponseSamples";
+import SchemaItem from "@theme/SchemaItem";
+import SchemaTabs from "@theme/SchemaTabs";
+import Markdown from "@theme/Markdown";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+
+<h1
+  className={"openapi__heading"}
+>
+  List all bosses
+</h1>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/v1/bosses"}
+>
+  
+</MethodEndpoint>
+
+
+
+Returns a list of in-game bosses with names, keys and defeated status. The number of active bosses is also provided.
+
+## Request
+
+<div>
+  <div>
+    <ApiTabs
+      label={undefined}
+      id={undefined}
+    >
+      <TabItem
+        label={"200"}
+        value={"200"}
+      >
+        <div>
+          
+          
+          OK
+          
+          
+        </div><div>
+          <MimeTabs
+            className={"openapi-tabs__mime"}
+            schemaType={"response"}
+          >
+            <TabItem
+              label={"application/json"}
+              value={"application/json"}
+            >
+              <SchemaTabs
+                className={"openapi-tabs__schema"}
+              >
+                <TabItem
+                  label={"Schema"}
+                  value={"Schema"}
+                >
+                  <details
+                    style={{}}
+                    className={"openapi-markdown__details response"}
+                    data-collapsed={false}
+                    open={true}
+                  >
+                    <summary
+                      style={{}}
+                      className={"openapi-markdown__details-summary-response"}
+                    >
+                      <strong>
+                        Schema
+                      </strong>
+                    </summary><div
+                      style={{"textAlign":"left","marginLeft":"1rem"}}
+                    >
+                      
+                    </div><ul
+                      style={{"marginLeft":"1rem"}}
+                    >
+                      <SchemaItem
+                        collapsible={false}
+                        name={"numberOfActiveBosses"}
+                        required={false}
+                        schemaName={"int32"}
+                        qualifierMessage={undefined}
+                        schema={{"type":"integer","description":"Number of currently active bosses.\nAn active boss represents a boss that has been summoned but has not yet been defeated.","format":"int32","minimum":0,"example":2}}
+                      >
+                        
+                      </SchemaItem><SchemaItem
+                        collapsible={true}
+                        className={"schemaItem"}
+                      >
+                        <details
+                          style={{}}
+                          className={"openapi-markdown__details"}
+                        >
+                          <summary
+                            style={{}}
+                          >
+                            <span
+                              className={"openapi-schema__container"}
+                            >
+                              <strong
+                                className={"openapi-schema__property"}
+                              >
+                                entries
+                              </strong><span
+                                className={"openapi-schema__name"}
+                              >
+                                 object[]
+                              </span>
+                            </span>
+                          </summary><div
+                            style={{"marginLeft":"1rem"}}
+                          >
+                            <div
+                              style={{"marginTop":".5rem","marginBottom":".5rem"}}
+                            >
+                              
+                              
+                              List of bosses.
+                              
+                              
+                            </div><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem","paddingBottom":".5rem"}}
+                              >
+                                Array [
+                              </div>
+                            </li><SchemaItem
+                              collapsible={false}
+                              name={"key"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={"**Possible values:** `non-empty`"}
+                              schema={{"description":"Key of the boss.","type":"string","minLength":1,"example":"gdking"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"name"}
+                              required={false}
+                              schemaName={"string"}
+                              qualifierMessage={"**Possible values:** `non-empty`"}
+                              schema={{"description":"Name of the boss.","type":"string","minLength":1,"example":"The Elder"}}
+                            >
+                              
+                            </SchemaItem><SchemaItem
+                              collapsible={false}
+                              name={"isDefeated"}
+                              required={false}
+                              schemaName={"boolean"}
+                              qualifierMessage={undefined}
+                              schema={{"description":"If true, the boss has been defeated.","type":"boolean"}}
+                            >
+                              
+                            </SchemaItem><li>
+                              <div
+                                style={{"fontSize":"var(--ifm-code-font-size)","opacity":"0.6","marginLeft":"-.5rem"}}
+                              >
+                                ]
+                              </div>
+                            </li>
+                          </div>
+                        </details>
+                      </SchemaItem>
+                    </ul>
+                  </details>
+                </TabItem><TabItem
+                  label={"Example (from schema)"}
+                  value={"Example (from schema)"}
+                >
+                  <ResponseSamples
+                    responseExample={"{\n  \"numberOfActiveBosses\": 2,\n  \"entries\": [\n    {\n      \"key\": \"gdking\",\n      \"name\": \"The Elder\",\n      \"isDefeated\": true\n    }\n  ]\n}"}
+                    language={"json"}
+                  >
+                    
+                  </ResponseSamples>
+                </TabItem>
+              </SchemaTabs>
+            </TabItem>
+          </MimeTabs>
+        </div>
+      </TabItem>
+    </ApiTabs>
+  </div>
+</div>
+      
